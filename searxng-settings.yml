@@ -1,0 +1,69 @@
+use_default_settings: true
+
+server:
+  secret_key: "gpt-researcher-searxng-key"
+  bind_address: "0.0.0.0"
+  port: 8080
+  limiter: false
+
+search:
+  formats:
+    - html
+    - json
+  default_lang: "en"
+
+outgoing:
+  request_timeout: 10
+  max_request_timeout: 15
+
+engines:
+  # Enable diverse engines to spread load
+  - name: google
+    engine: google
+    shortcut: go
+    disabled: false
+
+  - name: bing
+    engine: bing
+    shortcut: bi
+    disabled: false
+
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
+    disabled: false
+
+  - name: brave
+    engine: brave
+    shortcut: br
+    disabled: false
+
+  - name: qwant
+    engine: qwant
+    shortcut: qw
+    disabled: false
+
+  - name: mojeek
+    engine: mojeek
+    shortcut: mjk
+    disabled: false
+
+  - name: wikipedia
+    engine: wikipedia
+    shortcut: wp
+    disabled: false
+
+  - name: wikidata
+    engine: wikidata
+    shortcut: wd
+    disabled: false
+
+  - name: yahoo
+    engine: yahoo
+    shortcut: yh
+    disabled: false
+
+  - name: startpage
+    engine: startpage
+    shortcut: sp
+    disabled: false
